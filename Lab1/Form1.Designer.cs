@@ -33,7 +33,7 @@
             // 
             // intervalPercentage1
             // 
-            this.intervalPercentage1.Location = new System.Drawing.Point(185, 56);
+            this.intervalPercentage1.Location = new System.Drawing.Point(12, 12);
             this.intervalPercentage1.Name = "intervalPercentage1";
             this.intervalPercentage1.Size = new System.Drawing.Size(526, 291);
             this.intervalPercentage1.TabIndex = 0;

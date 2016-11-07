@@ -79,7 +79,15 @@ namespace Lab1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Row r = new Row(DateTime.Today, DateTime.Today, 20);
+            Row r;
+            if (Rows.Count > 0)
+            {
+                r = new Row(Rows[Rows.Count-1].Item2, DateTime.Today, 20);
+            }
+            else
+            {
+                r = new Row(DateTime.Today, DateTime.Today, 20);
+            }
             Rows.Add(r);
             IntervalRow c = new IntervalRow(r) {Dock = DockStyle.Top};
             c.XClick += OnXClick;

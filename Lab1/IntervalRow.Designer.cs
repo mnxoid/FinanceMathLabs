@@ -40,7 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(415, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(73, 20);
+            this.textBox1.Size = new System.Drawing.Size(78, 20);
             this.textBox1.TabIndex = 5;
             this.textBox1.Leave += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -66,7 +66,7 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(494, 3);
+            this.button1.Location = new System.Drawing.Point(499, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 6;
@@ -85,7 +85,7 @@
             this.MaximumSize = new System.Drawing.Size(700, 27);
             this.MinimumSize = new System.Drawing.Size(500, 27);
             this.Name = "IntervalRow";
-            this.Size = new System.Drawing.Size(514, 27);
+            this.Size = new System.Drawing.Size(522, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 

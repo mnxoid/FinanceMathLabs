@@ -38,9 +38,9 @@
             this.radioInflationOff = new System.Windows.Forms.RadioButton();
             this.iChart1 = new iChartLib.iChart();
             this.radioPV = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.radioFV = new System.Windows.Forms.RadioButton();
+            this.textPV = new System.Windows.Forms.TextBox();
+            this.textFV = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -118,6 +118,7 @@
             this.textInflation.Name = "textInflation";
             this.textInflation.Size = new System.Drawing.Size(100, 20);
             this.textInflation.TabIndex = 2;
+            this.textInflation.TextChanged += new System.EventHandler(this.textInflation_TextChanged_1);
             this.textInflation.Leave += new System.EventHandler(this.textInflation_TextChanged);
             // 
             // radioInflationOn
@@ -163,52 +164,58 @@
             // radioPV
             // 
             this.radioPV.AutoSize = true;
+            this.radioPV.Checked = true;
             this.radioPV.Location = new System.Drawing.Point(11, 20);
             this.radioPV.Name = "radioPV";
             this.radioPV.Size = new System.Drawing.Size(39, 17);
             this.radioPV.TabIndex = 5;
+            this.radioPV.TabStop = true;
             this.radioPV.Text = "PV";
             this.radioPV.UseVisualStyleBackColor = true;
             this.radioPV.CheckedChanged += new System.EventHandler(this.radioPV_CheckedChanged);
             // 
-            // radioButton7
+            // radioFV
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Checked = true;
-            this.radioButton7.Location = new System.Drawing.Point(11, 43);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(38, 17);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "FV";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioFV.AutoSize = true;
+            this.radioFV.Location = new System.Drawing.Point(11, 43);
+            this.radioFV.Name = "radioFV";
+            this.radioFV.Size = new System.Drawing.Size(38, 17);
+            this.radioFV.TabIndex = 6;
+            this.radioFV.Text = "FV";
+            this.radioFV.UseVisualStyleBackColor = true;
+            this.radioFV.CheckedChanged += new System.EventHandler(this.radioFV_CheckedChanged);
             // 
-            // textBox2
+            // textPV
             // 
-            this.textBox2.Location = new System.Drawing.Point(56, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 20);
-            this.textBox2.TabIndex = 7;
+            this.textPV.Location = new System.Drawing.Point(56, 19);
+            this.textPV.Name = "textPV";
+            this.textPV.Size = new System.Drawing.Size(259, 20);
+            this.textPV.TabIndex = 7;
+            this.textPV.TextChanged += new System.EventHandler(this.textPV_TextChanged);
+            this.textPV.Leave += new System.EventHandler(this.textPV_Leave);
             // 
-            // textBox3
+            // textFV
             // 
-            this.textBox3.Location = new System.Drawing.Point(56, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(259, 20);
-            this.textBox3.TabIndex = 8;
+            this.textFV.Enabled = false;
+            this.textFV.Location = new System.Drawing.Point(56, 42);
+            this.textFV.Name = "textFV";
+            this.textFV.Size = new System.Drawing.Size(259, 20);
+            this.textFV.TabIndex = 8;
+            this.textFV.TextChanged += new System.EventHandler(this.textFV_TextChanged);
+            this.textFV.Leave += new System.EventHandler(this.textFV_Leave);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.radioButton7);
+            this.groupBox3.Controls.Add(this.textFV);
+            this.groupBox3.Controls.Add(this.textPV);
+            this.groupBox3.Controls.Add(this.radioFV);
             this.groupBox3.Controls.Add(this.radioPV);
             this.groupBox3.Location = new System.Drawing.Point(217, 309);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(321, 71);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Змінні (вибрана - невідома)";
+            this.groupBox3.Text = "Змінні (вибрана - відома)";
             // 
             // groupBox4
             // 
@@ -222,6 +229,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(11, 19);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(304, 20);
@@ -284,9 +292,9 @@
         private System.Windows.Forms.RadioButton radioInflationOff;
         private iChartLib.iChart iChart1;
         private System.Windows.Forms.RadioButton radioPV;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RadioButton radioFV;
+        private System.Windows.Forms.TextBox textPV;
+        private System.Windows.Forms.TextBox textFV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox4;

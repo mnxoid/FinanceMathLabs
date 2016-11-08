@@ -56,6 +56,7 @@ namespace Lab1
             {
                 Rows[i].Item3 = (double)c.ChangePercent;
             }
+            Change?.Invoke(this, EventArgs.Empty);
         }
 
         private void OnXClick(object sender, EventArgs eventArgs)
@@ -70,6 +71,7 @@ namespace Lab1
             }
             Rows.RemoveAt(panel1.Controls.Count-1-panel1.Controls.IndexOf((Control)sender));
             panel1.Controls.Remove((Control)sender);
+            Change?.Invoke(this, eventArgs);
         }
 
         public List<Row> Rows=new List<Row>
@@ -95,6 +97,9 @@ namespace Lab1
             panel1.Controls.Add(c);
             panel1.Controls.SetChildIndex(c,0);
             panel1.Invalidate();
+            Change?.Invoke(this,e);
         }
+
+        public event EventHandler Change;
     }
 }

@@ -79,5 +79,15 @@ namespace Lab1
         public DateTime First => dateTimePicker1.Value;
         public DateTime Second => dateTimePicker2.Value;
         public double Percent => double.Parse(textBox1.Text);
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            double val;
+            bool success = double.TryParse(textBox1.Text, out val);
+            if (success)
+            {
+                Change?.Invoke(this, new ChangeArgs { ChangePercent = val });
+            }
+        }
     }
 }
